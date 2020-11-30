@@ -47,6 +47,7 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+
 // Selectors:
 // --cta--
 const links = document.querySelectorAll("nav a");
@@ -65,6 +66,7 @@ const contactTitle = document.querySelector(".contact h4");
 const contactOptions = document.querySelectorAll(".contact p");
 // --footer
 const footer = document.querySelector("footer p");
+
 
 // Update HTML:
 // --cta--
@@ -97,7 +99,26 @@ contactOptions[0].textContent = siteContent["contact"]["address"];
 contactOptions[1].textContent = siteContent["contact"]["phone"];
 contactOptions[2].textContent = siteContent["contact"]["email"];
 
-// --footer
+// --footer--
 footer.textContent = siteContent["footer"]["copyright"];
 
+
 // New content:
+const hello = document.createElement("a");
+hello.textContent = "Hello";
+hello.href = "#";
+document.querySelector("nav").appendChild(hello);
+
+const world = document.createElement("a");
+world.textContent = "World";
+world.href = "#";
+document.querySelector("nav").appendChild(world);
+
+links[0].style.color = "green";
+links[1].style.color = "green";
+links[2].style.color = "green";
+links[3].style.color = "green";
+links[4].style.color = "green";
+links[5].style.color = "green";
+hello.style.color = "green";
+world.style.color = "green";
