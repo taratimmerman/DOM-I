@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM\n Is\n Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -37,6 +37,47 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Images:
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// Selectors:
+// --cta--
+const links = document.querySelectorAll("nav a");
+const title = document.querySelector("h1");
+const button = document.querySelector("button");
+
+// --main-content--
+
+// --bottom-content--
+
+// --contact--
+
+// --footer
+const footer = document.querySelector("footer p");
+
+// Update HTML:
+// --cta--
+links[0].textContent = siteContent["nav"]["nav-item-1"];
+links[1].textContent = siteContent["nav"]["nav-item-2"];
+links[2].textContent = siteContent["nav"]["nav-item-3"];
+links[3].textContent = siteContent["nav"]["nav-item-4"];
+links[4].textContent = siteContent["nav"]["nav-item-5"];
+links[5].textContent = siteContent["nav"]["nav-item-6"];
+
+title.innerText = siteContent["cta"]['h1'];
+button.textContent = siteContent["cta"]["button"];
+
+// --main-content--
+
+// --bottom-content--
+
+// --contact--
+
+// --footer
+footer.textContent = siteContent["footer"]["copyright"];
+
+// New content:
