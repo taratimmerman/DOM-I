@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street\n Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -54,14 +54,15 @@ const title = document.querySelector("h1");
 const button = document.querySelector("button");
 
 // --main-content--
-const topTitles = document.querySelectorAll(".top-content h4")
-const bottomTitles = document.querySelectorAll(".bottom-content h4")
+const topTitles = document.querySelectorAll(".top-content h4");
+const bottomTitles = document.querySelectorAll(".bottom-content h4");
 
-const topContent = document.querySelectorAll(".top-content p")
-const bottomContent = document.querySelectorAll(".bottom-content p")
+const topContent = document.querySelectorAll(".top-content p");
+const bottomContent = document.querySelectorAll(".bottom-content p");
 
 // --contact--
-
+const contactTitle = document.querySelector(".contact h4");
+const contactOptions = document.querySelectorAll(".contact p");
 // --footer
 const footer = document.querySelector("footer p");
 
@@ -91,6 +92,10 @@ bottomContent[1].textContent = siteContent["main-content"]["product-content"];
 bottomContent[2].textContent = siteContent["main-content"]["vision-content"];
 
 // --contact--
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+contactOptions[0].textContent = siteContent["contact"]["address"];
+contactOptions[1].textContent = siteContent["contact"]["phone"];
+contactOptions[2].textContent = siteContent["contact"]["email"];
 
 // --footer
 footer.textContent = siteContent["footer"]["copyright"];
