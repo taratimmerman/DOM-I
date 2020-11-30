@@ -44,6 +44,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
 // Selectors:
 // --cta--
 const links = document.querySelectorAll("nav a");
@@ -51,8 +54,11 @@ const title = document.querySelector("h1");
 const button = document.querySelector("button");
 
 // --main-content--
+const topTitles = document.querySelectorAll(".top-content h4")
+const bottomTitles = document.querySelectorAll(".bottom-content h4")
 
-// --bottom-content--
+const topContent = document.querySelectorAll(".top-content p")
+const bottomContent = document.querySelectorAll(".bottom-content p")
 
 // --contact--
 
@@ -72,8 +78,17 @@ title.innerText = siteContent["cta"]['h1'];
 button.textContent = siteContent["cta"]["button"];
 
 // --main-content--
+topTitles[0].textContent = siteContent["main-content"]["features-h4"];
+topTitles[1].textContent = siteContent["main-content"]["about-h4"];
+bottomTitles[0].textContent = siteContent["main-content"]["services-h4"];
+bottomTitles[1].textContent = siteContent["main-content"]["product-h4"];
+bottomTitles[2].textContent = siteContent["main-content"]["vision-h4"];
 
-// --bottom-content--
+topContent[0].textContent = siteContent["main-content"]["features-content"];
+topContent[1].textContent = siteContent["main-content"]["about-content"];
+bottomContent[0].textContent = siteContent["main-content"]["services-content"];
+bottomContent[1].textContent = siteContent["main-content"]["product-content"];
+bottomContent[2].textContent = siteContent["main-content"]["vision-content"];
 
 // --contact--
 
